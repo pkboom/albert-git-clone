@@ -14,8 +14,6 @@ def handleQuery(query):
     if not query.isTriggered or not query.isValid:
         return
 
-    print(query.string)
-
     items.append(Item(
         id='clone',
         icon=icon,
@@ -23,7 +21,7 @@ def handleQuery(query):
         actions=[
             TermAction(text='git clone', 
                 commandline=['git', 'clone',  query.string], 
-                cwd='/home/y/code')
+                cwd='~/code')
         ],
     ))
 
