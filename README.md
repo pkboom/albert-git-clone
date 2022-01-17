@@ -1,6 +1,6 @@
 # Git clone
 
-This extension gits clone into ~/code directory.
+This extension will git clone into ~/code directory.
 
 ### Trigger
 

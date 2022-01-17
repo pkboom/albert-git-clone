@@ -21,7 +21,7 @@ def handleQuery(query):
         actions=[
             TermAction(text='git clone', 
                 commandline=['git', 'clone',  query.string], 
-                cwd='~/code/')
+                cwd="code")
         ],
     ))
 
