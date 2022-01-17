@@ -1,16 +1,7 @@
-# Show a list of projects
+# Git clone
 
-## Usage
-
-### Change `code`
-
-This is a root dirctory. Add additional directories to search for projects
-
-```python
-code = '/home/y/code'
-packages = path.join(code, 'packages')
-```
+This extension gits clone into ~/code directory.
 
 ### Trigger
 
-Trigger this extension with `co`.
+Trigger this extension with `clone `.
