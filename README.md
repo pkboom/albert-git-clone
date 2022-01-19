@@ -1,6 +1,6 @@
 # Git clone
 
-This extension will git clone into ~/code directory.
+This extension will git clone into ~/code directory and open it with vscode.
 
 ### Trigger
 
