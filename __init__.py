@@ -24,6 +24,7 @@ def handleQuery(query):
             TermAction(
                 text='git clone', 
                 script='git clone {} && code {}'.format(query.string, dir), 
+                cwd='/home/y/code'
             ),
         ],
     ))
