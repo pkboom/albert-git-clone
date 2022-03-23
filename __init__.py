@@ -9,10 +9,12 @@ __authors__ = "pkboom"
 icon = "{}/icon.png".format(path.dirname(__file__))
 
 def handleQuery(query):
-    if not query.isTriggered or not query.isValid:
+    if not query.isTriggered or not query.isValid or not query.string:
         return
 
     items = []
+        
+    dir = query.string.strip().split('/',1)[1].split('.git')[0] 
 
     items.append(Item(
         id='clone',
@@ -21,9 +23,8 @@ def handleQuery(query):
         actions=[
             TermAction(
                 text='git clone', 
-                commandline=['git', 'clone',  query.string], 
-                cwd="~/code"
-            )
+                script='git clone {} && code {}'.format(query.string, dir), 
+            ),
         ],
     ))
 
